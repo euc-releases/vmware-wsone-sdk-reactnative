@@ -1,4 +1,7 @@
-# react-native-workspace-one-sdk
+# ws1-sdk-react-native
+
+## Initial Setup
+<medium>Please find the [Prerequisites](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/GettingStarted.md) for using the React Native SDK </medium>
 
 ## Getting started
 
@@ -7,9 +10,6 @@
 ### Mostly automatic installation
 
 `$ react-native link react-native-workspace-one-sdk`
-
-## Initial Setup
-<medium>Please find the [Prerequisites](https://github.com/vmwareairwatchsdk/Xamarin-AWSDK/blob/master/GettingStarted.md) for using the React Native SDK </medium>
 
 ## Additional Setup
 ### iOS
