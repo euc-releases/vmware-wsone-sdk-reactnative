@@ -5,16 +5,16 @@
 
 ## Getting started
 
-`$ npm install react-native-workspace-one-sdk --save`
+`$ npm install ws1-sdk-react-native --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-workspace-one-sdk`
+`$ react-native link ws1-sdk-react-native`
 
 ## Additional Setup
 ### iOS
 Add following code in AppDelegate
-```
+```objective-c
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
   //Add following code for posting Notification for URL
@@ -28,16 +28,16 @@ Add following code in AppDelegate
 ### Android
 
 1. Add the library files location to the application build configuration
-```
+```java
     repositories {
         flatDir {
-            dirs "$rootDir/../node_modules/react-native-workspace-one-sdk/android/libs"
+            dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
         }
     }
 ```
 
 2. Modify AndroidManifest.xml for Main Launcher
-```
+```java
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -55,7 +55,7 @@ Add following code in AppDelegate
         </activity>
 ```
 2. Update your Main Activity 
-```
+```java
 import com.workspaceonesdk.WorkspaceOneSdkActivity;
 public class MainActivity extends WorkspaceOneSdkActivity {
 
@@ -76,7 +76,7 @@ public class MainActivity extends WorkspaceOneSdkActivity {
     -  Override the following Android Application methods: 
         - attachBaseContext
 
-```
+```java
 import com.workspaceonesdk.WorkspaceOneSdkApplication;
 public class MainApplication extends WorkspaceOneSdkApplication implements ReactApplication {
 
