@@ -1,4 +1,4 @@
-# ws1-sdk-react-native
+# Workspace ONE SDK For React Native
 
 ## Initial Setup
 <medium>Please find the [Prerequisites](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/GettingStarted.md) for using the React Native SDK </medium>
