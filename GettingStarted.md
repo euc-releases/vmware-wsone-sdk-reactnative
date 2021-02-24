@@ -105,3 +105,135 @@ For applications that are deployed publicly through the Play Store, send the pub
 ### Push App to Dev Device using App Catalog
 
 In order for the **Intelligent Hub** to manage an app, it needs to be sent to the device.  This can be done via an installation policy of **Automatic** or by pushing the app down once using the **Hub**'s *APP CATALOG*.  Once the app is listed in the *Managed Apps* section of the Hub, it is ready for local management.
+
+## Usage
+
+```javascript to initialize the SDK
+import WorkspaceOneSdk from 'react-native-workspace-one-sdk';
+import { NativeModules} from 'react-native';
+const {WorkspaceOneSdk } = NativeModules;
+
+export default class App extends Component {
+componentDidMount() {
+
+     // Start SDK.
+      WorkspaceOneSdk.startSDK()
+      const eventEmitter = new NativeEventEmitter(NativeModules.WorkspaceOneSdk);
+      this.eventListner = eventEmitter.addListener('initSuccess',(event) => {
+        console.log("SDK Init Success",event);
+      });
+      this.eventListner = eventEmitter.addListener('initFailure',(event) => {
+        console.log("SDK Init Failed",event);
+      });
+      
+  }
+}
+```
+
+```javascript to access Environment info
+import React, { Component } from 'react';
+import { NativeModules,StyleSheet, View, Button,Platform, Text} from 'react-native';
+const {WorkspaceOneSdk } = NativeModules;
+export default class Information extends Component {
+
+    constructor(){
+ 
+        super();
+   
+        this.state = {
+   
+            UserName:'User Not Found',
+            GroupId: 'GroupId Not Found',
+            ServerName: 'Server Name Not Found'
+        }
+   
+    }
+
+
+    componentDidMount = async() => {
+
+          try {
+           const  useName = await WorkspaceOneSdk.userName();
+            this.setState({
+                      UserName: 'User Name : ' + useName
+                  });
+          } catch (error) {
+            console.error(error);
+          }
+
+          try {
+            var groupId = await WorkspaceOneSdk.groupId();
+            this.setState({
+                      GroupId:  'Group Id : ' + groupId 
+                  });
+          } catch (error) {
+            console.error(error);
+          }
+
+          try {
+            const serverName = await WorkspaceOneSdk.serverName();
+            this.setState({
+              ServerName: 'Server Name : ' + serverName 
+                  });
+          } catch (error) {
+            console.error(error);
+          }
+
+    }
+
+}
+```
+## Functions
+
+Functions available for Android and iOS
+
+```javascript
+WorkspaceOneSdk.startSDK()
+```
+This will start the SDK initailization and will be notified if SDK initialization is success/failure by events 'initSuccess'/'initFailure'.
+
+```javascript
+WorkspaceOneSdk.userName()
+```
+Gets the enrolled user's username. The username is returned as a string. On iOS using this API may show a screen to enter username and password if the app gets registered to WSOne UEM console via managed settings.
+
+
+```javascript
+WorkspaceOneSdk.groupId()
+```
+Gets the enrolled user's group ID. The group ID will be returned as a string.
+
+
+```javascript
+WorkspaceOneSdk.serverName()
+```
+Get the name of the server to which the device is enrolled. The server name will be returned as a string.
+
+```javascript
+WorkspaceOneSdk.allowCopyPaste()
+```
+Gets the "allow copy/paste" setting for the profile. If true, then the user can copy and paste between managed apps. If false then the user cannot copy and paste between managed apps. The value is returned as a boolean.
+
+
+```javascript
+WorkspaceOneSdk.customSettings()
+```
+Gets any custom settings provided in the app's profile. The value will be returned as a string parameter.
+
+## Feature Implementation
+### Branding
+### iOS
+To enable brancding add AWSDKDefaultSettings.plist to app bundle and add new entries to the plist. For details on the entries to be added to enable branding in your app, navigate to https://code.vmware.com/web/sdk/Native/airwatch-ios and search for Branding.
+
+### Android
+Please follow the steps mentioned in https://github.com/vmware-samples/workspace-ONE-SDK-integration-samples/blob/main/IntegrationGuideForAndroid/Guides/04Branding/WorkspaceONE_Android_Branding.md to brand the splash screen, the app logo gets branded as per the images from the WS1 UEM console branding payload.
+
+### SSO
+### iOS
+To enable multiple apps built with the plugin share common authentication session and other SDK info, please follow the steps mentioned in the document at https://code.vmware.com/web/sdk/Native/airwatch-ios under section "Keychain Access Group Entitlements".
+
+### Android
+Nothing specific coding /configuration to be done on Android.
+
+
+
