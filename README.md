@@ -1,4 +1,5 @@
-# ws1-sdk-react-native
+
+# Workspace ONE SDK For React Native
 Use this document to install the VMware Workspace One SDK Plugin for React-Native. The plugin helps enterprise app developers add enterprise- grade security, conditional access, and compliance capabilities to mobile applications.
 
 ## Supported Components
