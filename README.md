@@ -1,9 +1,18 @@
 # ws1-sdk-react-native
+Use this document to install the VMware Workspace One SDK Plugin for React-Native. The plugin helps enterprise app developers add enterprise- grade security, conditional access, and compliance capabilities to mobile applications.
+
+## Supported Components
+This plugin works with the listed component versions.
+
+* Workspace ONE UEM Console 1907 or later
+* Android v8.0+ / API Level 23+
+* iOS 12.0+ / Xcode 12 and 12.1
+
 
 ## Initial Setup
 <medium>Please find the [Prerequisites](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/GettingStarted.md) for using the React Native SDK </medium>
 
-## Getting started
+## Package installation
 
 `$ npm install ws1-sdk-react-native --save`
 
@@ -114,80 +123,28 @@ public class MainApplication extends WorkspaceOneSdkApplication implements React
     }
 }
 ```
-## Usage
 
-```javascript to initialize the SDK
-import WorkspaceOneSdk from 'react-native-workspace-one-sdk';
-import { NativeModules} from 'react-native';
-const {WorkspaceOneSdk } = NativeModules;
+## Feature Description
+Initialization of the SDK adds the listed features to your application, depending on the configurations set in the SDK profile in the Workspace One UEM Console.
 
-export default class App extends Component {
-componentDidMount() {
+* Application level passcode
+* Application level tunneling of network traffic
+* Integrated authentication / single sign on
+* Data loss prevention
+    * Disable Screenshot (Android only)
+    * Restrict open-in for documents, web links, and email to approved applications only Restrict copy/paste (SDK provides flag value)
+    * Restrict access to app when device is offline
+    * Branding of VMware AirWatch splash screens when SDK application is launched on device
 
-     // Start SDK.
-      WorkspaceOneSdk.startSDK()
-      const eventEmitter = new NativeEventEmitter(NativeModules.WorkspaceOneSdk);
-      this.eventListner = eventEmitter.addListener('initSuccess',(event) => {
-        console.log("SDK Init Success",event);
-      });
-      this.eventListner = eventEmitter.addListener('initFailure',(event) => {
-        console.log("SDK Init Failed",event);
-      });
-      
-  }
-}
-```
+ ## Feature Implementation
+ Please follow document at [implementation](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/GettingStarted.md).
 
-```javascript to access Environment info
-import React, { Component } from 'react';
-import { NativeModules,StyleSheet, View, Button,Platform, Text} from 'react-native';
-const {WorkspaceOneSdk } = NativeModules;
-export default class Information extends Component {
+## Release Notes
+First release of Workspace One SDK for React Native support.
+Latest versions of Workspace One SDKs (21.1 for iOS and Android).
 
-    constructor(){
- 
-        super();
-   
-        this.state = {
-   
-            UserName:'User Not Found',
-            GroupId: 'GroupId Not Found',
-            ServerName: 'Server Name Not Found'
-        }
-   
-    }
+## Workspace One SDK Documentation
+For further details about the Workspace One SDK, navigate to https://my.workspaceone.com/products/Workspace-ONE-SDK and select the required platform, SDK version and Workspace ONE UEM console version.
 
-
-    componentDidMount = async() => {
-
-          try {
-           const  useName = await WorkspaceOneSdk.userName();
-            this.setState({
-                      UserName: 'User Name : ' + useName
-                  });
-          } catch (error) {
-            console.error(error);
-          }
-
-          try {
-            var groupId = await WorkspaceOneSdk.groupId();
-            this.setState({
-                      GroupId:  'Group Id : ' + groupId 
-                  });
-          } catch (error) {
-            console.error(error);
-          }
-
-          try {
-            const serverName = await WorkspaceOneSdk.serverName();
-            this.setState({
-              ServerName: 'Server Name : ' + serverName 
-                  });
-          } catch (error) {
-            console.error(error);
-          }
-
-    }
-
-}
-
+## Questions and Feedback
+For any questions/feedback or to report an issue, please reach out to VMware support teams at https://secure.workspaceone.com/login
