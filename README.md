@@ -142,7 +142,7 @@ Initialization of the SDK adds the listed features to your application, dependin
 
 ## Release Notes
 First release of Workspace One SDK for React Native support.
-Latest versions of Workspace One SDKs (21.1 for iOS and Android).
+Latest versions of Workspace One SDKs (21.2 for iOS and Android).
 
 ## Workspace One SDK Documentation
 For further details about the Workspace One SDK, navigate to https://my.workspaceone.com/products/Workspace-ONE-SDK and select the required platform, SDK version and Workspace ONE UEM console version.
