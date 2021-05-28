@@ -147,5 +147,11 @@ Latest versions of Workspace One SDKs (21.2 for iOS and Android).
 ## Workspace One SDK Documentation
 For further details about the Workspace One SDK, navigate to https://my.workspaceone.com/products/Workspace-ONE-SDK and select the required platform, SDK version and Workspace ONE UEM console version.
 
+## License
+[VMWare License](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/LICENSE.md)
+
+## Open Source Link
+[VMWare Open Source Link](https://www.air-watch.com/downloads/open_source_license_vmware_workspace_one_sdk_for_react_native_1.0.0_ga.txt)
+
 ## Questions and Feedback
 For any questions/feedback or to report an issue, please reach out to VMware support teams at https://secure.workspaceone.com/login
