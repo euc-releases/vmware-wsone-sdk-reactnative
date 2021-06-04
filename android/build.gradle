@@ -9,7 +9,7 @@ buildscript {
     }
     repositories {
         flatDir {
-            dirs "$rootDir/../node_modules/react-native-workspace-one-sdk/android/libs"
+            dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
         }
         google()
         jcenter()
@@ -28,7 +28,7 @@ allprojects {
 //        }
 
         flatDir {
-            dirs "$rootDir/../node_modules/react-native-workspace-one-sdk/android/libs"
+            dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
         }
         mavenLocal()
         maven {
