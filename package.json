@@ -22,7 +22,7 @@
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.13.0",
     "react-native-webview": "^11.0.3",
-    "react-native-workspace-one-sdk": "^1.0.0",
+    "ws1-sdk-react-native": "^1.0.0",
     "watchman": "^1.0.0"
   },
   "devDependencies": {
