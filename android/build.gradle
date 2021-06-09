@@ -8,9 +8,15 @@ buildscript {
         targetSdkVersion = 29
     }
     repositories {
-        flatDir {
-            dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
+        //Old implementation
+        // flatDir {
+        //     dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
+        // }
+        //Change to new Maven URL
+        maven {
+            url 'https://vmwaresaas.jfrog.io/artifactory/Workspace-ONE-Android-SDK/'
         }
+    }
         google()
         jcenter()
     }
@@ -23,13 +29,15 @@ buildscript {
 
 allprojects {
     repositories {
-//        flatDir {
-//            dirs "libs"
-//        }
-
-        flatDir {
-            dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
+        //Old implementation
+        // flatDir {
+        //     dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
+        // }
+        //Change to new Maven URL
+        maven {
+            url 'https://vmwaresaas.jfrog.io/artifactory/Workspace-ONE-Android-SDK/'
         }
+    }
         mavenLocal()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
