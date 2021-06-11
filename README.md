@@ -1,13 +1,12 @@
-
-# Workspace ONE SDK For React Native
+# ws1-sdk-react-native
 Use this document to install the VMware Workspace One SDK Plugin for React-Native. The plugin helps enterprise app developers add enterprise- grade security, conditional access, and compliance capabilities to mobile applications.
 
 ## Supported Components
 This plugin works with the listed component versions.
 
-* Workspace ONE UEM Console 1907 or later
-* Android v8.0+ / API Level 23+
-* iOS 12.0+ / Xcode 12 and 12.1
+* Workspace ONE UEM Console 1912 or later
+* Android v6.0+ / API Level 23+
+* iOS 12.0+ / Xcode 12.3 and 12.4
 
 
 ## Initial Setup
@@ -40,8 +39,13 @@ Add following code in AppDelegate
 1. Add the library files location to the application build configuration
 ```java
     repositories {
-        flatDir {
-            dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
+    //Old implementation
+    // flatDir {
+    //     dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
+    // }
+    //Change to new Maven URL
+        maven {
+            url 'https://vmwaresaas.jfrog.io/artifactory/Workspace-ONE-Android-SDK/'
         }
     }
 ```
@@ -141,17 +145,18 @@ Initialization of the SDK adds the listed features to your application, dependin
  Please follow document at [implementation](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/GettingStarted.md).
 
 ## Release Notes
-First release of Workspace One SDK for React Native support.
-Latest versions of Workspace One SDKs (21.2 for iOS and Android).
+* Updated Version of WorkspaceOne SDKs(21.4.1 for iOS and 21.3 for Android)
+    * **Change build.gradle for Maven URL as mentioned above in [Android Implementation](#Android)**
 
 ## Workspace One SDK Documentation
 For further details about the Workspace One SDK, navigate to https://my.workspaceone.com/products/Workspace-ONE-SDK and select the required platform, SDK version and Workspace ONE UEM console version.
 
 ## License
-[VMWare License](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/LICENSE.md)
+[VMWare License](https://code.vmware.com/docs/12215/VMwareWorkspaceONESoftwareDevelopmentKitLicenseAgreement.pdf)
 
 ## Open Source Link
-[VMWare Open Source Link](https://www.air-watch.com/downloads/open_source_license_vmware_workspace_one_sdk_for_react_native_1.0.0_ga.txt)
+[VMWare Open Source Link](https://www.vmware.com/content/dam/aw-microsites/open-source/assets/open_source_license_VMware_Workspace_ONE_SDK_for_React_Native_1.1.0_GA.txt)
+
 
 ## Questions and Feedback
 For any questions/feedback or to report an issue, please reach out to VMware support teams at https://secure.workspaceone.com/login
