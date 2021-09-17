@@ -160,4 +160,4 @@ For further details about the Workspace One SDK, navigate to [Workspace-ONE-SDK]
 
 
 ## Questions and Feedback
-For any questions/feedback or to report an issue, please reach out to [VMware support teams] (https://secure.workspaceone.com/login)
+For any questions/feedback or to report an issue, please reach out to [VMware support teams](https://secure.workspaceone.com/login)
