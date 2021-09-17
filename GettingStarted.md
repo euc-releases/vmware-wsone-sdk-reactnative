@@ -14,7 +14,7 @@ In order to inject Workspace ONE SDK functionality into your  React-Native AWSDK
 ### Requirements
 
 * iOS 12.0+
-* Visual Studio Code  and Xcode 12.1
+* Visual Studio Code  and Xcode 12.3 or 12.4
 * Workspace ONE-enrolled iOS test device
 * The Workspace ONE React-Native SDK  package from npm.
 * A React-Native iOS app to integrate with the Workspace ONE SDK
@@ -223,14 +223,14 @@ Gets any custom settings provided in the app's profile. The value will be return
 ## Feature Implementation
 ### Branding
 ### iOS
-To enable brancding add AWSDKDefaultSettings.plist to app bundle and add new entries to the plist. For details on the entries to be added to enable branding in your app, navigate to https://code.vmware.com/web/sdk/Native/airwatch-ios and search for Branding.
+To enable brancding add AWSDKDefaultSettings.plist to app bundle and add new entries to the plist. For details on the entries to be added to enable branding in your app, navigate [here](https://code.vmware.com/web/sdk/Native/airwatch-ios) and search for Branding.
 
 ### Android
-Please follow the steps mentioned in https://github.com/vmware-samples/workspace-ONE-SDK-integration-samples/blob/main/IntegrationGuideForAndroid/Guides/04Branding/WorkspaceONE_Android_Branding.md to brand the splash screen, the app logo gets branded as per the images from the WS1 UEM console branding payload.
+Please follow the steps mentioned in [GitHub](https://github.com/vmware-samples/workspace-ONE-SDK-integration-samples/blob/main/IntegrationGuideForAndroid/Guides/04Branding/WorkspaceONE_Android_Branding.md) to brand the splash screen, the app logo gets branded as per the images from the WS1 UEM console branding payload.
 
 ### SSO
 ### iOS
-To enable multiple apps built with the plugin share common authentication session and other SDK info, please follow the steps mentioned in the document at https://code.vmware.com/web/sdk/Native/airwatch-ios under section "Keychain Access Group Entitlements".
+To enable multiple apps built with the plugin share common authentication session and other SDK info, please follow the steps mentioned in the document [here](https://code.vmware.com/web/sdk/Native/airwatch-ios) under section "Keychain Access Group Entitlements".
 
 ### Android
 Nothing specific coding /configuration to be done on Android.
