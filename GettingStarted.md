@@ -109,7 +109,6 @@ In order for the **Intelligent Hub** to manage an app, it needs to be sent to th
 ## Usage
 
 ```javascript to initialize the SDK
-import WorkspaceOneSdk from 'react-native-workspace-one-sdk';
 import { NativeModules} from 'react-native';
 const {WorkspaceOneSdk } = NativeModules;
 
