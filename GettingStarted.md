@@ -14,7 +14,7 @@ In order to inject Workspace ONE SDK functionality into your  React-Native AWSDK
 ### Requirements
 
 * iOS 12.0+
-* Visual Studio Code  and Xcode 12.3 or 12.4
+* Visual Studio Code  and Xcode 12.5/12.5.1
 * Workspace ONE-enrolled iOS test device
 * The Workspace ONE React-Native SDK  package from npm.
 * A React-Native iOS app to integrate with the Workspace ONE SDK
