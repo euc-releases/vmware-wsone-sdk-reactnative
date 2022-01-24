@@ -146,7 +146,7 @@ Initialization of the SDK adds the listed features to your application, dependin
  Please follow document at [implementation](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/GettingStarted.md).
 
 ## Release Notes
-* Updated Version of WorkspaceOne SDKs(21.8.1 for iOS and 21.7 for Android)
+* Updated Version of WorkspaceOne SDKs(21.11.0 for iOS and Android)
     * **Change build.gradle for Maven URL as mentioned above in [Android Implementation](#Android)**
 
 ## Workspace One SDK Documentation
