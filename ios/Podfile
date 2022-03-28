@@ -9,6 +9,8 @@ target 'example' do
   use_react_native!(:path => config["reactNativePath"])
 
 
+  pod 'ws1-sdk-react-native', :path => '../node_modules/ws1-sdk-react-native'
+
   target 'exampleTests' do
     inherit! :complete
     # Pods for testing
