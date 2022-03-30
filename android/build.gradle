@@ -16,7 +16,7 @@ buildscript {
         maven {
             url 'https://vmwaresaas.jfrog.io/artifactory/Workspace-ONE-Android-SDK/'
         }
-    }
+
         google()
         jcenter()
     }
@@ -30,14 +30,14 @@ buildscript {
 allprojects {
     repositories {
         //Old implementation
-        // flatDir {
-        //     dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/libs"
-        // }
+         flatDir {
+             dirs "$rootDir/../node_modules/ws1-sdk-react-native/android/lib"
+         }
         //Change to new Maven URL
         maven {
             url 'https://vmwaresaas.jfrog.io/artifactory/Workspace-ONE-Android-SDK/'
         }
-    }
+    
         mavenLocal()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
