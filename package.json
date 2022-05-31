@@ -1,6 +1,6 @@
 {
   "name": "example",
-  "version": "22.3.0",
+  "version": "22.5.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -15,15 +15,15 @@
     "@react-navigation/stack": "^5.12.4",
     "install": "^0.13.0",
     "node-notifier": "^8.0.1",
-    "react": "16.13.1",
-    "react-native": "^0.64.2",
+    "react": "17.0.1",
+    "react-native": "^0.64.3",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.13.0",
     "react-native-webview": "^11.0.3",
     "watchman": "^1.0.0",
-    "ws1-sdk-react-native": "^22.3.0"
+    "ws1-sdk-react-native": "^22.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

@@ -4,9 +4,9 @@ Use this document to install the VMware Workspace One SDK Plugin for React-Nativ
 ## Supported Components
 This plugin works with the listed component versions.
 
-* Workspace ONE UEM Console 2005 or later
-* Android v8.0+ / API Level 23+ 
-* iOS 12.0+ / Xcode 13/13.1/13.2.1
+* Workspace ONE UEM Console 2011 or later
+* Android v8.0+ / API Level 23+/ Workspace ONE Intelligent Hub v22.02 or above / Gradle Android Build System (Gradle) 4.1.3 or above.
+* iOS 13.0+ / Xcode 13.2.1
 
 
 ## Initial Setup
@@ -146,8 +146,7 @@ Initialization of the SDK adds the listed features to your application, dependin
  Please follow document at [implementation](https://github.com/vmwareairwatchsdk/vmware-wsone-sdk-reactnative/blob/master/GettingStarted.md).
 
 ## Release Notes
-* Updated Version of WorkspaceOne SDKs(22.2.0 for iOS and Android)
-    * **Change build.gradle for Maven URL as mentioned above in [Android Implementation](#Android)**
+* Updated Version of WorkspaceOne SDKs(22.4 for iOS and 22.4 for Android)
 
 ## Workspace One SDK Documentation
 For further details about the Workspace One SDK, navigate to [Workspace-ONE-SDK](https://my.workspaceone.com/products/Workspace-ONE-SDK) and select the required platform, SDK version and Workspace ONE UEM console version.
@@ -156,7 +155,7 @@ For further details about the Workspace One SDK, navigate to [Workspace-ONE-SDK]
 [VMWare License](https://code.vmware.com/docs/12215/VMwareWorkspaceONESoftwareDevelopmentKitLicenseAgreement.pdf)
 
 ## Open Source Link
-[VMWare Open Source Link](https://www.vmware.com/content/dam/aw-microsites/open-source/assets/open_source_license_VMware_Workspace_ONE_SDK_for_React_Native_1.2.0_GA.txt)
+[VMWare Open Source Link](https://www.vmware.com/content/dam/aw-microsites/open-source/assets/open_source_license_Workspace_ONE_React_Native_SDK_22.05_GA.txt)
 
 
 ## Questions and Feedback
